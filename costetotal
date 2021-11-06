@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+main(){
+	
+	long int ventas_cola, ventas_naranja, ventas_limon;
+	float precio_cola, precio_naranja, precio_limon;
+	float total_cola, total_naranja, total_limon;
+	
+	printf("datos de la cola:\n ");
+	printf("\t ventas:");
+	scanf("%1d", &ventas_cola);
+	printf("\t precio:");
+	scanf("%f", &precio_cola);
+	
+	printf("\tdatos de la naranja:\n");
+	printf("\t ventas ");
+	scanf("%1d", &ventas_naranja);
+	printf("\tprecio:");
+	scanf("%f", &precio_naranja);
+	
+	printf("datos del limon: \n");
+	printf("\t ventas");
+	scanf("%1d",&ventas_limon);
+	printf("\tprecio");
+	scanf("%f", &precio_limon);
+	
+	total_cola=ventas_cola*precio_cola;
+	total_naranja=ventas_naranja*precio_naranja;
+	total_limon=ventas_limon*precio_limon;
+	
+	printf("producto    ventas       precio       total\n");
+	printf("----------------------------------------------");
+	printf("cola            %71d          %4.2f       %9.2f\n", ventas_cola, precio_cola, total_cola);
+	printf("naranja         %71d          %4.2f       %9.2f\n", ventas_naranja, precio_naranja, total_naranja);
+	printf("limon           %71d          %4.2f       %9.2f\n", ventas_limon, precio_limon, total_limon);
+	printf("                                    total %9.2f\n", total_cola+total_naranja+total_limon);
+}
